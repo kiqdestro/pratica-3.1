@@ -1,5 +1,4 @@
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -20,9 +19,9 @@ public class Pratica31 {
     
     public static void main(String[] args){
         inicio = new Date();
-        dataNascimento = new GregorianCalendar (1996, Calendar.AUGUST, 03);
+        dataNascimento = new GregorianCalendar (1996, 7, 03);
         meuNome = "Caique Destro";
-        String n = "";
+        String n;
         String m;
         GregorianCalendar dataAtual;
         
@@ -35,13 +34,17 @@ public class Pratica31 {
                 + meuNome.substring(0, 1).toUpperCase() + ". ";
                 
         System.out.println(m+"\n");
-
-        dataAtual = new GregorianCalendar();
-        long diferenca = dataAtual.getTimeInMillis() - dataNascimento.getTimeInMillis();
+        
+        long diferenca = inicio.getTime() - dataNascimento.getTimeInMillis();
+        
         diferenca = diferenca/86400000;
+        
         System.out.println(diferenca);
+        
         fim = new Date();
+        
         long tempoDecorrido = fim.getTime() - inicio.getTime();
+        
         System.out.println(tempoDecorrido);
     }
 }
