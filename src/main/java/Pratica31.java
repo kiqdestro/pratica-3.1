@@ -1,4 +1,3 @@
-
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -10,41 +9,41 @@ import java.util.GregorianCalendar;
 
 /**
  *
- * @author kiqdestro
+ * @author askoda
  */
 public class Pratica31 {
-    private static String meuNome;
+    private static String meuNome = "Caique Destro";
+    private static GregorianCalendar dataNascimento = new GregorianCalendar(1996, 7, 03);
     private static Date inicio, fim;
-    private static GregorianCalendar dataNascimento;
     
-    public static void main(String[] args){
+    public static void main(String[] args) {
         inicio = new Date();
-        dataNascimento = new GregorianCalendar (1996, 7, 03);
-        meuNome = "Caique Destro";
-        String n;
-        String m;
-        GregorianCalendar dataAtual;
         
-            n = meuNome.toUpperCase();
-            
+        String n;
+        n = meuNome.toUpperCase();
+        
         System.out.println(n);
+        
+        String m;
         
         m = meuNome.substring(7, 8).toUpperCase() +
                 meuNome.substring(8, 13).toLowerCase() + ", "
                 + meuNome.substring(0, 1).toUpperCase() + ". ";
-                
-        System.out.println(m+"\n");
         
-        long diferenca = inicio.getTime() - dataNascimento.getTimeInMillis();
+        System.out.println(m + "\n");
         
-        diferenca = diferenca/86400000;
+        long dias;
         
-        System.out.println(diferenca);
+        dias = (inicio.getTime() - dataNascimento.getTimeInMillis())
+        /(86400000);
+        
+        System.out.println(dias);
         
         fim = new Date();
         
-        long tempoDecorrido = fim.getTime() - inicio.getTime();
+        long tempo = fim.getTime() - inicio.getTime();
         
-        System.out.println(tempoDecorrido);
+        System.out.println(tempo);
+        
     }
 }
