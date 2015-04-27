@@ -34,7 +34,7 @@ public class Pratica31 {
                 meuNome.substring(8, 13).toLowerCase() + ", "
                 + meuNome.substring(0, 1).toUpperCase() + ". ";
                 
-        System.out.println(m);
+        System.out.println(m+"\n");
 
         dataAtual = new GregorianCalendar();
         long diferenca = dataAtual.getTimeInMillis() - dataNascimento.getTimeInMillis();
