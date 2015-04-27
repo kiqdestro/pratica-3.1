@@ -23,27 +23,18 @@ public class Pratica31 {
         dataNascimento = new GregorianCalendar (1996, Calendar.AUGUST, 03);
         meuNome = "Caique Destro";
         String n = "";
+        String m;
         GregorianCalendar dataAtual;
         
-        for (int i = 0; i < meuNome.length(); i++) {
-            n += Character.toUpperCase(meuNome.charAt(i));
+            n = meuNome.toUpperCase();
             
-        }
-        meuNome = n;
-        System.out.println(meuNome);
-        n = "";
-        for (int i = 0; i < meuNome.length(); i++) {
-            if (i==7){
-                n += meuNome.charAt(i);
-            }
-            if (i>7){
-            n += Character.toLowerCase(meuNome.charAt(i));
-            }
-        }
-            n += ", ";
-            n += meuNome.charAt(0);
-            n += ".";
         System.out.println(n);
+        
+        m = meuNome.substring(7, 8).toUpperCase() +
+                meuNome.substring(8, 13).toLowerCase() + ", "
+                + meuNome.substring(0, 1).toUpperCase() + ". ";
+                
+        System.out.println(m);
 
         dataAtual = new GregorianCalendar();
         long diferenca = dataAtual.getTimeInMillis() - dataNascimento.getTimeInMillis();
